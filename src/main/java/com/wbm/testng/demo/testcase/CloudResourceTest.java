@@ -23,9 +23,9 @@ public class CloudResourceTest {
   @Test(groups = {"CloudResource"})
   public void getResourceList() throws IOException {
     String type = "ODPS";
-    Reporter.log("【正常用例】:获取" + Constans.ALIYUN_PK + "云资源列表");
+    Reporter.log("【正常用例】:获取" + Constans.ACCOUNT + "云资源列表");
     String cloudResourceUrl =
-        String.format(URL + Constans.CLOUD_RESOURCE_LIST, Constans.ALIYUN_PK, type);
+        String.format(URL + Constans.CLOUD_RESOURCE_LIST, Constans.ACCOUNT, type);
     HttpResult result = HttpConnection.doGet(cloudResourceUrl);
     Reporter.log("请求地址: " + cloudResourceUrl);
     Assert.assertEquals(result.getCode(), HttpStatus.OK.value());
@@ -37,7 +37,7 @@ public class CloudResourceTest {
     String schemaCode = "test_abc";
     Reporter.log("【正常用例】:云资源标识" + schemaCode + "唯一性校验");
     String cloudResourceUrl =
-        String.format(URL + Constans.CLOUD_RESOURCE_UNIQUE, Constans.ALIYUN_PK, schemaCode);
+        String.format(URL + Constans.CLOUD_RESOURCE_UNIQUE, Constans.ACCOUNT, schemaCode);
     HttpResult result = HttpConnection.doGet(cloudResourceUrl);
     Reporter.log("请求地址: " + cloudResourceUrl);
     Assert.assertEquals(result.getCode(), HttpStatus.OK.value());
