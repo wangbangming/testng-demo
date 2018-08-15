@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My-test1">
+  <test name="My-test1">
+    <classes>
+      <class name="com.wbm.testng.demo.testcase.JdbcConnectTest"/>
+      <class name="com.wbm.testng.demo.testcase.CloudResourceTest"/>
+    </classes>
+  </test>
+</suite> 
